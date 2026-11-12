@@ -1,3 +1,4 @@
 # MG6
 1. If the for loop is written inside the Update() function, I think the entire for loop will be executed before the end of this frame's Update(). It won't execute loop once per frame. For example, if a for loop needs to loop many times, then Unity will execute this entire loop first, and only then can this frame be considered over. So if the loop takes a very long time to complete, the game may experience lag or frame drops instead of being automatically distributed over many frames for gradual execution.
 2. I have noticed that sometimes players will get stuck when crossing the platform, or the collision is not stable. This is because the current code only closes the platform collision based on whether the player is moving upwards. If the player starts to fall down before completely crossing the platform, the collision will reopen, which is why such problems may occur.
+https://qingw7.itch.io/minigame6

@@ -64,7 +64,14 @@ public class Cat : MonoBehaviour
         //      collider.
         // You might want to check the Rigidbody2D scripting documentation
         //      for a useful variable :)
-        
+        if (_rigidbody.linearVelocity.y > 0)
+        {
+            _collider.excludeLayers = LayerMask.GetMask("Platform");
+        }
+        else
+        {
+            _collider.excludeLayers = 0;
+        }
 
         
         // STEP 1 -------------------------------------------------------------
